@@ -1,0 +1,37 @@
+{
+  "_id": { "$oid": "642f1f9b8f1b2a6d9c8a1234" },
+  "brand": "Renault",
+  "model": "Zoe",
+  "registration": "AB-123-CD",
+  "ownerId": { "$oid": "642f1f9b8f1b2a6d9c8a5678" },
+  "telemetry": {
+    "lastPosition": {
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "ts": { "$date": "2026-02-17T10:00:00Z" }
+    },
+    "batteryPercent": 78
+  },
+  "incidents": [
+    {
+      "date": { "$date": "2026-01-11T09:20:00Z" },
+      "type": "flat_tire",
+      "description": "Rear left puncture",
+      "evidenceId": { "$oid": "643a2b3c4d5e6f7a8b9c0123" }
+    },
+    {
+      "date": { "$date": "2025-11-01T09:20:00Z" },
+      "type": "Moteur",
+      "description": "Engine noise after startup"
+    }
+  ],
+  "specs": {
+    "range_km": 395,
+    "motor_kw": 80,
+    "battery_kwh": 52,
+    "software_version": "v2.4.1",
+    "autopilot_enabled": false
+  },
+  "createdAt": { "$date": "2024-09-01T08:00:00Z" },
+  "updatedAt": { "$date": "2026-02-17T10:05:00Z" }
+}
