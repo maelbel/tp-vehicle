@@ -137,7 +137,7 @@ public class VehicleService {
         vehicle.setTelemetry(t);
       }
 
-      List<Document> incs = document.get("incidents", List.class);
+      List<Document> incs = document.getList("incidents", Document.class);
       if (incs != null) {
           List<Incident> list = new ArrayList<>();
           

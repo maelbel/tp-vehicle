@@ -5,13 +5,18 @@ import java.util.List;
 import java.util.Map;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "vehicles")
 public class Vehicle {
+  @Id
   private ObjectId id;
   private String brand;
   private String model;
   private String registration;
   private ObjectId ownerId;
+  private String status;
   private Telemetry telemetry;
   private List<Incident> incidents;
   private Map<String, Object> specs;
@@ -32,6 +37,9 @@ public class Vehicle {
 
   public ObjectId getOwnerId() { return ownerId; }
   public void setOwnerId(ObjectId ownerId) { this.ownerId = ownerId; }
+
+  public String getStatus() { return status; }
+  public void setStatus(String status) { this.status = status; }
 
   public Telemetry getTelemetry() { return telemetry; }
   public void setTelemetry(Telemetry telemetry) { this.telemetry = telemetry; }
