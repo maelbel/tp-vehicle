@@ -167,7 +167,7 @@ public class ReactiveTelemetryApp {
             coll.insertMany(batch).subscribe(new Subscriber<InsertManyResult>(){
                 @Override public void onSubscribe(Subscription s) { s.request(1); }
                 @Override public void onNext(InsertManyResult result) {
-                    // intentionally left blank: insertMany result is not used here
+                    // empty
                 }
                 @Override public void onError(Throwable t) { logger.error("InsertMany error", t); latch.countDown(); }
                 @Override public void onComplete() { latch.countDown(); }
